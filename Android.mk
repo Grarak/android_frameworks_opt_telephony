@@ -33,7 +33,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android.hardware.radio.config-V1.0-java \
     android.hardware.radio.deprecated-V1.0-java \
     android.hidl.base-V1.0-java \
-    ims-ext-common
+    ims-ext-common \
+    vendor.samsung.hardware.radio-V1.2-java
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := telephony-common
