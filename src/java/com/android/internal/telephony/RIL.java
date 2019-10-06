@@ -812,6 +812,8 @@ public class RIL extends BaseCommands implements CommandsInterface {
     public void dial(String address, int clirMode, UUSInfo uusInfo, Message result) {
         IRadio radioProxy = getRadioProxy(result);
         if (radioProxy != null) {
+            android.media.AudioSystem.setParameters("phoneid=" + mPhoneId);
+
             RILRequest rr = obtainRequest(RIL_REQUEST_DIAL, result,
                     mRILDefaultWorkSource);
 
@@ -1527,6 +1529,8 @@ public class RIL extends BaseCommands implements CommandsInterface {
     public void acceptCall(Message result) {
         IRadio radioProxy = getRadioProxy(result);
         if (radioProxy != null) {
+            android.media.AudioSystem.setParameters("phoneid=" + mPhoneId);
+
             RILRequest rr = obtainRequest(RIL_REQUEST_ANSWER, result,
                     mRILDefaultWorkSource);
 
